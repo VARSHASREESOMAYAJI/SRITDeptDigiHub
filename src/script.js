@@ -195,25 +195,48 @@ function renderLanding() {
 function renderLogin() {
   appRoot.innerHTML = `
     <div class="login-container">
-      <div class="login-card">
-        <img src="https://www.srit.ac.in/wp-content/uploads/2021/08/logo.png" alt="SRIT Logo" class="w-24 h-24 mx-auto mb-4 object-contain" onerror="this.src='https://picsum.photos/seed/srit/100/100';this.onerror=null;" referrerPolicy="no-referrer">
-        <h2 class="text-2xl mb-2">Welcome Back</h2>
-        <p class="text-gray-500 mb-6 text-sm">Login using institutional email ID (@srit.ac.in)</p>
-        
-        <form id="login-form">
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="login-email" class="form-control" placeholder="name@srit.ac.in" required>
+      <div class="login-side-image">
+        <div class="login-side-content">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.dYB0VtikKLrlVBD4Q9x69gHaIL?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SRIT Logo" class="w-24 h-24 mb-8 object-contain bg-white p-3 rounded-2xl shadow-2xl" referrerPolicy="no-referrer">
+          <h2>Empowering Knowledge</h2>
+          <p>Welcome to the SRIT Department Digital Hub. Access your academic dashboard, track attendance, and stay connected with the department.</p>
+        </div>
+      </div>
+      
+      <div class="login-form-side">
+        <!-- Decorative Motion Elements -->
+        <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+          <div class="absolute top-10 left-10 w-32 h-32 bg-white opacity-10 rounded-full blur-3xl animate-pulse"></div>
+          <div class="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 opacity-10 rounded-full blur-3xl animate-bounce" style="animation-duration: 10s"></div>
+        </div>
+
+        <div class="login-card">
+          <div class="flex items-center gap-4 mb-8">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.dYB0VtikKLrlVBD4Q9x69gHaIL?rs=1&pid=ImgDetMain&o=7&rm=3" alt="SRIT Logo" class="w-12 h-12 object-contain" referrerPolicy="no-referrer">
+            <div>
+              <h2 class="text-gray-900 leading-tight m-0">Sign In</h2>
+              <p class="text-gray-500 text-sm m-0">Institutional Portal Access</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+          
+          <form id="login-form">
+            <div class="form-group">
+              <label class="text-gray-700 font-semibold">Institutional Email</label>
+              <input type="email" id="login-email" class="form-control" placeholder="name@srit.ac.in" required>
+            </div>
+            <div class="form-group">
+              <label class="text-gray-700 font-semibold">Password</label>
+              <input type="password" id="login-password" class="form-control" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-full">Access Dashboard</button>
+          </form>
+          
+          <div class="mt-8 pt-6 border-t border-gray-100 flex items-center justify-between">
+            <a href="#" onclick="renderView('landing')" class="text-sm text-gray-500 hover:text-orange-600 flex items-center gap-2 transition-colors">
+              <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Home
+            </a>
+            <span class="text-xs text-gray-300 font-mono">v2.5.0</span>
           </div>
-          <button type="submit" class="btn btn-primary w-full mt-4">Login to Dashboard</button>
-        </form>
-        
-        <div class="mt-6">
-          <a href="#" onclick="renderView('landing')" class="text-sm text-orange-600 hover:underline">Back to Home</a>
         </div>
       </div>
     </div>
@@ -256,7 +279,7 @@ function renderDashboard() {
     <div class="app-container">
       <aside class="sidebar">
         <div class="sidebar-logo flex items-center gap-2">
-          <img src="https://www.srit.ac.in/wp-content/uploads/2021/08/logo.png" alt="Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'" referrerPolicy="no-referrer">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.dYB0VtikKLrlVBD4Q9x69gHaIL?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo" class="w-8 h-8 object-contain" onerror="this.style.display='none'" referrerPolicy="no-referrer">
           <span>DDH PORTAL</span>
         </div>
         <nav class="flex-1">
